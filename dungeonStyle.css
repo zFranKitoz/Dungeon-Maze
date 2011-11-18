@@ -1,0 +1,18 @@
+
+form{ 
+	background-color:#b10515;
+	margin:0 auto;
+	padding:20px;
+	width:330px;
+}
+	   
+	   
+	input:valid {background:green;}
+    input:invalid {background:red;}
+
+#principal_Container{
+	text-align:center;
+}
+#log{
+overflow: scrool; 
+}
