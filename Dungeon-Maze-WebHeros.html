@@ -1,0 +1,47 @@
+﻿<!doctype>
+<html>
+  <head>
+    <title>Dungeon Mage Game - WebHeros</title>
+    <link rel="stylesheet" href="dungeonStyle.css" type="text/css" media="screen" />
+
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="introScript.js" type="text/javascript"></script>
+	
+	<script src="modernizr-1.6.min.js"></script>
+	<script src="objects.js" type="text/javascript"></script>
+	<script src="collitions.js" type="text/javascript"></script>
+	<script src="messages.js" type="text/javascript"></script>
+	<script src="dungeonScript.js" type="text/javascript"></script>
+	
+    </head>
+    <body >
+	
+	<div id="container2">
+		
+		<canvas id="canvas" width="500" height="300">
+			Your browser doesn't support canvas element, so meditate about that
+		</canvas>
+			<div id="log_container">
+				<p id="log"></p>
+			</div>
+			<div id="instructions">
+				im the log of the game:<br/>
+				Press W= UP.<br/>
+				Press S= DOWN.<br/>
+				Press A= LEFT.<br/>
+				Press D= RIGHT.<br/>
+			</div>
+		<div id="regreso">
+			<a href="#"> Escoger Otro Personaje </a>
+		</div>
+		
+		<form name="f" id="f" onSubmit="return change();">
+		Horizontal Velocity <input name="hv" id="hv" value="4" type="number" min="-10" max="10" />
+		<br/>
+		Vertical Velocity <input name="vv" id="vv" value="8" type="number" min="-10" max="10" />
+		<input type="submit" value="CHANGE" />
+		</form>
+		
+	</div>
+    </body>
+    </html>
