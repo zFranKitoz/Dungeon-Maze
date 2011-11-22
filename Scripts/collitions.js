@@ -1,6 +1,7 @@
 /*all collitions*/
 
 function wallCollition(cobject,carena){
+	// future position:
 		var xunits = cobject.px + cobject.speed;
 		var yunits = cobject.py + cobject.speed;
 		

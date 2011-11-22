@@ -1,14 +1,21 @@
 /* OBjets of the game:*/
+/*
 
+// imagen de obj.
+    
+warrior:
+clerigo:http://rebelion.game-server.cc/web/images/stories/noticias/clases/clerigopath_p.jpg
+valkiria:http://www.paginadeinicio.net/images/diablo2/amazona/valkiria.jpg
+*/
+//hero:
 function warSubject(type, px, py, rscale){
 		this.type = type;
 		 this.imag = new Image();
 		 this.speed;
 			 switch(this.type){
 				case 'warrior':
-						this.imag.src = "http://tux.crystalxp.net/png/mawie-masai-tux-warrior-2319.png";
+						this.imag.src = "img/tuxWarrior.png";//"http://tux.crystalxp.net/png/mawie-masai-tux-warrior-2319.png";
 						this.speed = 20;
-						
 					break;
 				case 'clerigo':
 						this.imag.src = "http://rebelion.game-server.cc/web/images/stories/noticias/clases/clerigopath_p.jpg";
@@ -19,23 +26,23 @@ function warSubject(type, px, py, rscale){
 						this.speed = 20;
 					break;
 				case 'goblin':
-						this.imag.src = "http://www.hiveworkshop.com/forums/images_all/smilies/contest_smilies/goblin_good_job.gif";
+						this.imag.src = "img/goblinImg.gif";//"http://www.hiveworkshop.com/forums/images_all/smilies/contest_smilies/goblin_good_job.gif";
 						this.speed = 20;
 					break;
 				case 'orco':
-						this.imag.src = "http://vz.iminent.com/vz/0fef9035-ec9e-4e87-b04a-604c77081125/2/orco-enojado.gif";
+						this.imag.src = "img/orcoImg.gif";//"http://vz.iminent.com/vz/0fef9035-ec9e-4e87-b04a-604c77081125/2/orco-enojado.gif";
 						this.speed = 20;
 					break;
 				default:
 					break;
 			}
 		 
-		 this.rscale = rscale 
+		 this.rscale = rscale // para coliciones.
 		 
-		 this.centralx = px;
+		 this.centralx = px;	//centro imagen.
 		 this.centraly = py;
 		 
-		 this.px = px - rscale; 
+		 this.px = px - rscale; //punto superior izq.
 		 this.py = py - rscale;
 		 
 		 this.xunits = 0;
@@ -44,6 +51,9 @@ function warSubject(type, px, py, rscale){
 		 this.pwidth = rscale * 2;
 		 this.pheight = rscale * 2;
 		 
+		 
+		 
+		//this.adapt = adaptHero;
 		 this.draw = drawsubject;
 		 
 	}
@@ -58,30 +68,45 @@ function warSubject(type, px, py, rscale){
 		ctx.restore();
 	}
 	
-//arena
+
+	
+	
+	
+//arena:	
+	
+// cambiar variables para adaptar a diferentes arenas.
 	function Arena(pbx,		pby,		pbwidth,		pbheight,		lineWidth, fontColor, lineColor){
 		this.boxx = pbx;
 		this.boxy = pby;
 		this.lineWidth	= lineWidth;// ballrad
 		this.boxwidth = pbwidth;
 		this.boxheight = pbheight;
-		
+	//colors
 		this.fillStyle = fontColor;
 		this.strokeStyle = lineColor;
 		
+		
+		
 	//limits
+		
 		this.boxboundx =  pbwidth + pbx - 3*lineWidth;
 		this.boxboundy = pbheight + pby - 3*lineWidth;
+		// arriba y izq. (+) xq es para q entre al area
 		this.inboxboundx = pbx + lineWidth;
 		this.inboxboundy = pby + lineWidth;
+		
+	
 		
 		this.draw = drawarena;
 	}
 	function drawarena(){
-
+		
+		
 		ctx.fillStyle =	this.fillStyle;
 		ctx.fillRect(this.boxx, this.boxy, this.boxwidth, this.boxheight);
+		
 		ctx.lineWidth = 3;
+			//Box
 		ctx.strokeStyle = this.strokeStyle;
 		ctx.strokeRect(1, 1, this.boxwidth-2, this.boxheight-2);
 		
