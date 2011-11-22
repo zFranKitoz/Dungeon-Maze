@@ -1,4 +1,4 @@
-
+/*
 form{ 
 	background-color:#b10515;
 	margin:0 auto;
@@ -13,6 +13,83 @@ form{
 #principal_Container{
 	text-align:center;
 }
+*/
 #log{
-overflow: scrool; 
+	
+	margin: 0 auto;
+	height:100px;
+	overflow: scroll; 
+	width: 600px;
+}
+
+
+*{
+font-family:Comic Sans Ms;
+}
+
+body{
+background-color: gray;
+}
+
+
+h1{
+color:blue;
+text-align:center;
+font-size:30px;
+}
+
+
+p{
+font-size:12px;
+}
+
+/*Reglas del juego*/
+
+#container{
+width:600px;
+background-color:white;
+border:solid silver 3px;
+text-align:justify;
+float:left;
+background-color: black;
+}
+
+/*Selección de personajes*/
+
+form{
+margin-left:30%;
+}
+
+#container2{
+text-align:center;
+width:950px;
+height: 600px;
+border:solid silver 3px;
+background-color:white;
+}
+
+#campo{
+width: 890px;
+height: 505px;
+position: relative;
+left: 20px;
+top: 25px;
+border:solid black 3px;
+}
+
+#regreso{
+width: 900px;
+height: 50px;
+top: 21px;
+left: 20px;
+position: relative;
+text-align: right;
+padding: 20px 2px 20px 20px;
+}
+
+/*Ventana del juego*/ 
+
+#seleccionJugadores li{
+display:inline;
+margin:30px;
 }
